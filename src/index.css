@@ -67,7 +67,6 @@ body{
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   width: 90%;
-
   margin: 10px;
 }
 
@@ -100,14 +99,21 @@ body{
   border-radius: 25%;
 }
 
+span{
+  width: 80%;
+  overflow:hidden;
+  overflow-wrap: break-word;
+}
+
 .taskbar{
   height: 450px;
   padding-top: 10px;
   width: 95%;
   margin: auto;
   overflow: scroll;
-  /* scrollbar-width:none; */
+  scrollbar-width:thin;
   overflow-x: hidden;
+  scrollbar-color: rgba(163, 163, 163, 0.5) rgba(255, 255, 255, 0) ;
 }
 
 /* Tablet (max-width: 1024px) */

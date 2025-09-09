@@ -1,6 +1,4 @@
 import { useState } from "react"
-
-
 function Todolist(){
 
     const [taskList,setTaskList]=useState([])
@@ -47,8 +45,6 @@ function Todolist(){
         }
     })
 
-
-
     return (
         <>
             <div className="todo">
@@ -60,7 +56,7 @@ function Todolist(){
             <div className="taskbar" >
             <ul className="list" >
                 {taskList.map((task,index)=>
-                <li  key={index} > {index+1}: {task}
+                <li  key={index} > <span> {index+1}:{task} </span>
                     <div className="btn">
                     <button className="deletebtn" onClick={()=>deleteTask(index)} >🗑️</button>
                     <button className="move" onClick={()=>moveUp(index)} >☝</button>
@@ -72,7 +68,6 @@ function Todolist(){
             </div>
             </div>
             </>
-
     );
 }
 
