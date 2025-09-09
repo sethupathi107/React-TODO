@@ -1,0 +1,196 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: cursive;
+}
+
+body{
+  background-color:white;
+}
+
+.todo{
+
+  margin: auto;
+  margin-top: 50px;
+  background-color: hsla(0, 0%, 0%, 0.1);
+  width: 45vw;
+  height: 85vh;
+  border-radius: 15px;
+}
+
+.title{
+  text-align: center;
+  padding: 20px ;
+
+}
+
+.add{
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.add .inputbox{
+  border: 1px solid hsla(0, 0%, 0%, 0.2) ;
+  border-radius: 5px ;
+  width: 73%;
+  padding: 9px 10px;
+  font-size: 20px;
+  box-shadow: 0px 0px 5px hsla(0, 0%, 0%, 0.4);
+}
+
+.add .addbtn{
+  padding: 9px 8px;
+  font-size: 20px;
+  font-weight: 800;
+  margin-left: 20px;
+  border-radius: 5px ;
+  border: 1px solid hsla(0, 0%, 0%, 0.2) ;
+  box-shadow: 0px 0px 5px hsla(0, 0%, 0%, 0.4);
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  color: rgb(81, 81, 81);
+
+}
+
+.list li{
+  display: flex;
+  align-items: center;
+  text-align: left;
+  justify-content: space-between;
+  padding: 8px 10px;
+  font-size: 20px;
+  border-radius: 5px ;
+  border: 1px solid hsla(0, 0%, 0%, 0.2) ;
+  box-shadow: 0px 0px 5px hsla(0, 0%, 0%, 0.4);
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  width: 90%;
+
+  margin: 10px;
+}
+
+.list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  
+}
+
+.btn{
+  display: flex;
+}
+
+.btn button {
+  font-size: 1.5rem;
+  margin: 0px 2px;
+  border: none;
+  background-color:rgba(255, 0, 0, 0);
+}
+
+.btn button:hover{
+  background-color: hsla(0, 0%, 0%, 0.1);
+  border-radius: 25%;
+  cursor: pointer;
+}
+.btn .deletebtn:hover{
+  background-color: hsla(0, 0%, 0%, 0.1);
+  border-radius: 25%;
+}
+
+.taskbar{
+  height: 450px;
+  padding-top: 10px;
+  width: 95%;
+  margin: auto;
+  overflow: scroll;
+  /* scrollbar-width:none; */
+  overflow-x: hidden;
+}
+
+/* Tablet (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .todo {
+    width: 65vw;
+    height: auto;
+  }
+
+  .add .inputbox {
+    width: 65%;
+    font-size: 18px;
+  }
+
+  .add .addbtn {
+    font-size: 18px;
+    margin-left: 10px;
+    padding: 8px 6px;
+  }
+
+  .list li {
+    font-size: 18px;
+    width: 95%;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .todo {
+    width: 85vw;
+    height: auto;
+  }
+
+  .add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .add .inputbox {
+    width: 95%;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .add .addbtn {
+    width: 95%;
+    margin-left: 0;
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .list li {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .todo {
+    width: 95vw;
+    margin-top: 20px;
+    height: auto;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+
+  .add .inputbox,
+  .add .addbtn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .list li {
+    font-size: 14px;
+    padding: 6px 8px;
+  }
+
+  .btn button {
+    font-size: 1.2rem;
+  }
+}
