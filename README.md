@@ -1,12 +1,99 @@
-# React + Vite
+# React TODO App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and modern **To-Do List application** built using **React + Vite**.  
+This project demonstrates component-based architecture, state management, and a clean UI for task tracking.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- Add tasks
+- Delete tasks
+- Instant UI updates
+- Fast build using Vite
+- Clean and responsive design
+- ESLint configured
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠 Tech Stack
+
+- React
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+- ESLint
+
+---
+
+## 📂 Project Structure
+
+```
+React-TODO/
+│
+├── public/
+├── src/
+├── index.html
+├── package.json
+├── vite.config.js
+└── eslint.config.js
+```
+
+---
+
+## ⚙️ Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/sethupathi107/React-TODO.git
+cd React-TODO
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Run development server
+
+```bash
+npm run dev
+```
+
+---
+
+## 📜 Scripts
+
+```
+npm run dev      → Start dev server
+npm run build    → Build project
+npm run preview  → Preview build
+npm run lint     → Run ESLint
+```
+
+---
+
+## 📌 Future Improvements
+
+- Edit tasks
+- Local storage saving
+- Dark mode
+- Drag & drop tasks
+- Backend integration
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome.  
+For major changes, open an issue first to discuss what you would like to change.
+
+---
+
+## 👨‍💻 Author
+
+**Sethupathi**  
+GitHub: https://github.com/sethupathi107
