@@ -17,6 +17,8 @@ function Todolist(){
     function addTask(){
         if(tasks.trim()!=""){
             setTaskList([...taskList,tasks])
+
+            console.log("hiii")
             setTasks("");            
             localStorage.setItem("user", JSON.stringify([...taskList,tasks]));
         }
@@ -25,6 +27,7 @@ function Todolist(){
 
     function deleteTask(index){
         setTaskList(taskList.filter((_,i)=> i!==index))
+        localStorage.setItem("user", JSON.stringify(taskList.filter((_,i)=> i!==index)));
     }
 
     function moveUp(index){
@@ -32,16 +35,18 @@ function Todolist(){
             const upMove=[...taskList];
             [upMove[index],upMove[index-1]]= [upMove[index-1],upMove[index]];
             console.log(upMove)
+            localStorage.setItem("user", JSON.stringify(upMove));
             setTaskList(upMove)
         }
     }
 
     function  moveDown(index){
         if(index<taskList.length-1){
-            const upMove=[...taskList];
-            [upMove[index],upMove[index+1]]= [upMove[index+1],upMove[index]];
-            console.log(upMove)
-            setTaskList(upMove)
+            const downMove=[...taskList];
+            [downMove[index],downMove[index+1]]= [downMove[index+1],downMove[index]];
+            console.log(downMove)
+            localStorage.setItem("user", JSON.stringify(downMove));
+            setTaskList(downMove)
         }
     }
 
