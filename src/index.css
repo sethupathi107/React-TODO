@@ -114,6 +114,7 @@ span{
   scrollbar-width:thin;
   overflow-x: hidden;
   scrollbar-color: rgba(163, 163, 163, 0.5) rgba(255, 255, 255, 0) ;
+  background-color:linear-gradient(to right, #ff7e5f, #feb47b);
 }
 
 /* Tablet (max-width: 1024px) */

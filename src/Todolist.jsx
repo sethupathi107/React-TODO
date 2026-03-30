@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 function Todolist(){
 
     const [taskList,setTaskList]=useState([])
@@ -9,12 +9,19 @@ function Todolist(){
         setTasks(e.target.value)
     }
 
+    useEffect(() => {
+    const storedTasks = JSON.parse(localStorage.getItem("user")) || [];
+    setTaskList(storedTasks);
+}, []);
+    
     function addTask(){
         if(tasks.trim()!=""){
-        setTaskList([...taskList,tasks])
-        setTasks("");
+            setTaskList([...taskList,tasks])
+            setTasks("");            
+            localStorage.setItem("user", JSON.stringify([...taskList,tasks]));
         }
     }
+    // localStorage.clear()
 
     function deleteTask(index){
         setTaskList(taskList.filter((_,i)=> i!==index))
@@ -39,11 +46,19 @@ function Todolist(){
     }
 
 
-    addEventListener("keypress",(e)=>{
-        if(e.key==="Enter"){
+useEffect(() => {
+    function handleKeyPress(e) {
+        if (e.key === "Enter") {
             addTask();
         }
-    })
+    }
+
+    window.addEventListener("keypress", handleKeyPress);
+
+    return () => {
+        window.removeEventListener("keypress", handleKeyPress);
+    };
+}, [tasks, taskList]);
 
     return (
         <>
